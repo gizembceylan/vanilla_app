@@ -36,6 +36,7 @@ li {
   line-height: 19px;
   margin: 0;
   padding: 0;
+  text-transform: capitalize;
 }
 
 .overview {
@@ -49,6 +50,8 @@ li {
   margin-right: 5px;
   height: 64px;
   width: 64px;
+  position: relative;
+  bottom: 15px;
 }
 
 .weather-temperature strong {

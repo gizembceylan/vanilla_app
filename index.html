@@ -17,15 +17,15 @@
         <div class="weatherapp-wrapper"> 
             <div class="wearherapp"> 
                 <div class="overview">
- <h1>
-     Bodrum
+ <h1 id="city">
+     
  </h1>
  <ul>
      <li>
       Friday 05:00   
      </li>
-     <li>
-         Clear
+     <li id=description>
+    
      </li>
  </ul>
 </div>
@@ -35,7 +35,7 @@
     <img src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
      alt="sunny"
      class="float-left">
-    <strong> 12° </strong>
+    <strong id="temperature">  </strong>
     <span class="units">
           C|<a href="#">°F</a>
     </span>
@@ -44,10 +44,7 @@
 <div class="col-6">
     <ul>
         <li>
-            Precipitation: 0%
-        </li>
-        <li>
-            Humidity: 73%
+            Humidity: <span id="humidity"> </span>%
         </li>
         <li>
             Wind: 2km/h
