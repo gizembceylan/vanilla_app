@@ -2,12 +2,15 @@ body {
   font-family: arial, sans-serif;
 }
 
-.weatherapp {
+.weatherapp-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+
+.wearherapp {
   padding: 20px;
-  border: 2px solid #dadde1;
-  border-radius: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 h1 {
