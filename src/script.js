@@ -17,9 +17,10 @@ function formatDate(timestamp) {
     let day= days[date.getDay()];
 
 
-    return '${day} ${hours}:${minutes}';
+    return `${day} ${hours}:${minutes}`; 
 } 
  
+
  
  function displayTemperature(response){
 
@@ -32,6 +33,7 @@ function formatDate(timestamp) {
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
+    let iconElement = document.querySelector("#icon");
 
      temperatureElement.innerHTML = Math.round(response.data.main.temp);
      cityElement.innerHTML= response.data.name;
@@ -39,11 +41,14 @@ function formatDate(timestamp) {
      humidityElement.innerHTML = response.data.main.humidity;
      windElement.innerHTML = Math.round(response.data.wind.speed);
      dateElement.innerHTML = formatDate(response.data.dt * 1000);
-    
+
+    iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
  }
  
 let apiKey = "1969214d93e86fb47c6d955926f85399";
-let city = "Bodrum";
+let city = "Treviso";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   console.log(apiUrl);
