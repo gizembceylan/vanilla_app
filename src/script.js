@@ -4,12 +4,12 @@ function formatDate(timestamp) {
 
     let hours= date.getHours();
     if (hours <10){
-      hours= '0${hours}'
+      hours= `0${hours}`
     }
 
     let minutes = date.getMinutes();
     if (minutes <10){
-      minutes ='0${minutes}';
+      minutes =`0${minutes}`;
     }
 
     let days= ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday"];
@@ -23,9 +23,6 @@ function formatDate(timestamp) {
 
  
  function displayTemperature(response){
-
-     console.log(response.data.main.temp);
-     console.log(response.data);
 
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
@@ -45,11 +42,26 @@ function formatDate(timestamp) {
     iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+    iconElement.setAttribute("alt", response.data.weather[0].description);
  }
- 
+
+
+function search(city){
 let apiKey = "1969214d93e86fb47c6d955926f85399";
-let city = "Treviso";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-  console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);
+
+ }
+
+ function handleSubmit(event) {
+   event.preventDefault();
+   let cityInputElement = document.querySelector("#city-input");
+   search(cityInputElement.value);
+ }
+
+ search("New York");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit",handleSubmit);
