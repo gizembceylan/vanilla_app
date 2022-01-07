@@ -13,7 +13,6 @@ function formatDate(timestamp) {
     }
 
     let days= ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday"];
-
     let day= days[date.getDay()];
 
 
@@ -78,8 +77,8 @@ fahrenheitLink.classList.add("active");
 
  function displayCelciusTemperature(event){
    event.preventDefault();
-   celciusLink.classList.add("active");
-   fahrenheitLink.classList.remove("active");
+celciusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
    let temperatureElement = document.querySelector("#temperature");
 
    temperatureElement.innerHTML = Math.round(celciusTemperature);
