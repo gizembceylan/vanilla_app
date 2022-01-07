@@ -66,3 +66,15 @@ li {
   font-size: 16px;
   top: -32px;
 }
+
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+}
+
+.weather-temperature .active {
+  text-decoration: none;
+}
+.weather-temperature .fahrenheit {
+  text-decoration: none;
+}
