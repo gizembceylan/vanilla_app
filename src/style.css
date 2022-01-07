@@ -10,7 +10,7 @@ body {
 
 .wearherapp {
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid #cbbcd1;
   border-radius: 10px;
   background-color: #cbbcd1;
 }
@@ -81,4 +81,5 @@ li {
 
 #search-button {
   background: #da747b;
+  border-color: #cbbcd1;
 }
