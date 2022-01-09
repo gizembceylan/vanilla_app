@@ -16,6 +16,8 @@ body {
 }
 
 h1 {
+  display: block;
+  margin: 0 auto;
   color: #da747b;
   display: block;
   font-family: arial, sans-serif;
