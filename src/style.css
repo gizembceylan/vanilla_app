@@ -16,8 +16,6 @@ body {
 }
 
 h1 {
-  display: block;
-  margin: 0 auto;
   color: #da747b;
   display: block;
   font-family: arial, sans-serif;
@@ -103,4 +101,8 @@ li {
 
 .weather-forecast-temperature-max {
   font-weight: bold;
+}
+
+.github {
+  color: white;
 }
